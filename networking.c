@@ -6,6 +6,8 @@
 #include "php_ini.h"
 #include "ext/standard/info.h"
 #include "php_networking.h"
+#include "networking_server.h"
+
 
 PHP_MINIT_FUNCTION(networking)
 {

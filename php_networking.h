@@ -37,6 +37,8 @@ extern zend_module_entry networking_module_entry;
 #include "TSRM.h"
 #endif
 
+#include "php.h"
+
 /*
   	Declare any global variables you may need between the BEGIN
 	and END macros here:
@@ -61,11 +63,14 @@ ZEND_TSRMLS_CACHE_EXTERN()
 
 #define NETWORKING_VERSION "v1.0"
 
+
 #define NETWORKING_STARTUP_FUNCTION(module)  ZEND_MINIT_FUNCTION(networking_##module)
 #define NETWORKING_RINIT_FUNCTION(module)    ZEND_RINIT_FUNCTION(networking_##module)
 #define NETWORKING_STARTUP(module)           ZEND_MODULE_STARTUP_N(networking_##module)(INIT_FUNC_ARGS_PASSTHRU)
 #define NETWORKING_SHUTDOWN_FUNCTION(module) ZEND_MSHUTDOWN_FUNCTION(networking_##module)
 #define NETWORKING_SHUTDOWN(module)          ZEND_MODULE_SHUTDOWN_N(networking_##module)(INIT_FUNC_ARGS_PASSTHRU)
+
+
 /*
  * Local variables:
  * tab-width: 4
