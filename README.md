@@ -6,14 +6,20 @@
 
 $server = new Network('127.0.0.1',9000)  
 
-$server->on('onConnect',function($server, $fd){
-  echo "connection open: {$fd}\n";
+$server->on('onConnect',function($server, $fd){  
+
+  echo "connection open: {$fd}\n";  
+
 	
 });  
+  
 
-$server->on('onMessage',function($server,$fd){
-	$server->send($fd,'hello world!');
+$server->on('onMessage',function($server,$fd){  
+
+	$server->send($fd,'hello world!');  
+
 	
-})
+})  
+
 $server->run();  
 
