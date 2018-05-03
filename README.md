@@ -4,7 +4,7 @@
 
 **example**  
 
-$server = new Network('127.0.0.1',9000)  
+$server = new Networking('127.0.0.1',9000)  
 
 $server->on('onConnect',function($server, $fd){  
 
